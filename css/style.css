@@ -1,0 +1,538 @@
+/* Fonts */
+@font-face { font-family: 'SFProDisplayBold'; src: url('../font/sfprodisplaybold.ttf'); }
+@font-face { font-family: 'SFProDisplaySemiBold'; src: url('../font/sfprodisplaysemibold.ttf'); }
+@font-face { font-family: 'SFProTextBold';  src: url('../font/sfprotextbold.ttf'); }
+@font-face { font-family: 'SFUIDisplayBold'; src: url('../font/sfuidisplaybold.otf'); }
+@font-face { font-family: 'SFUIDisplaySemiBold'; src: url('../font/sfuidisplaysemibold.otf'); }
+
+
+/* Style */
+body { background: #151518; color: #fff; }
+button { cursor: pointer; border: none; }
+button:active, select:active { outline: none; border: none; }
+button:focus, select:focus { outline: 0; }
+* { box-sizing: border-box; }
+
+
+#banner {
+  font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;
+  background: url('../image/bg-banner.jpg');
+  padding-bottom: 10%;
+
+  background-size: cover;
+}
+
+#banner nav {
+  float: right;
+}
+
+#banner nav a {
+  padding: 0 30px;
+  color: rgba(255,255,255,0.4);
+  font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;
+}
+
+#banner nav a.active {
+  color: #fff;
+}
+
+#banner nav a.active::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+  position: relative;
+  left: 18px;
+  top: 10px;
+}
+
+#banner nav a:hover {
+  color: #fff;
+}
+
+.icons-top i {
+  padding: 0 20px;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.11);
+}
+
+
+/* MOVIE DESCRIPTION FEATURED */
+.infos-featured-movie {
+  font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;
+}
+
+.infos-featured-movie p:nth-child(2) strong, .infos-featured-movie p:nth-child(2) i {
+  font-size: 1.5em;
+}
+
+.infos-featured-movie p:nth-child(2) strong {
+  margin-right: 30px;
+}
+
+.infos-featured-movie i {
+  color: #ffb400;
+}
+
+.infos-featured-movie p strong {
+  color: #fff;
+}
+
+.infos-featured-movie p {
+  color: rgba(255,255,255,0.5);
+}
+
+.infos-featured-movie h1 {
+  font-size: 3em;
+  font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;
+}
+
+.infos-featured-movie p:nth-child(4) {
+  color: #fff;
+  font-size: 1.125em;
+  line-height: 25px;
+}
+
+.infos-featured-movie button {
+  width: 177px;
+  height: 55px;
+  border-radius: 75px;
+  background: #db1623;
+  color: #fff;
+  box-shadow: -6px 10px 89px 16px rgba(219, 22, 35, 0.55);
+  text-transform: uppercase;
+}
+
+.infos-featured-movie button i {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.infos-featured-movie button:nth-child(6) {
+  background: #000;
+  box-shadow: none;
+  margin-left: 40px;
+}
+
+
+
+
+/* MOVIE CATEGORIES */
+.movie-categories {
+  font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;  
+}
+
+.movie-categories::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #28282f;
+  position: relative;
+  top: 100px;
+}
+
+.movie-categories p, .movie-categories i {
+  color: #66666f;
+}
+
+.movie-categories p {
+  margin-top: 8px;
+}
+
+.movie-categories h2 img {
+  margin-right: 10px;
+}
+
+.movie-categories h2::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+  position: relative;
+  left: 135.5px;
+  top: 10px;
+}
+
+.movies-before h2::after {
+  left: 80px !important;
+}
+
+.select-categories {
+  display: none;
+}
+
+
+/* SECTION MOVIES TRENDS */
+.movie-trends button {
+  width: 177px;
+  height: 45px;
+  border-radius: 75px;
+  background: rgba(102,102,111,0.1);
+  color: #fff;
+  margin: 0 20px;
+}
+
+/* style input select */
+.movie-trends select {
+  cursor: pointer;
+  background: url('../image/arrow.png') no-repeat #28282f;  /* Imagem de fundo (Seta) */
+  border: none;
+  border-radius: 75px;
+  background-position: 135px center;  /*Posição da imagem do background*/
+  width: 177px; /* Tamanho do select, maior que o tamanho da div "div-select" */
+  height: 45px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+  font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;  
+  font-size: 18px; /* Tamanho da Fonte */
+  padding: 13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+  color: #fff; /* Cor da Fonte */
+  text-indent: 0.01px; /* Remove seta padrão do FireFox */
+  text-overflow: "";  /* Remove seta padrão do FireFox */     
+  margin: 0 20px;
+}
+
+.movie-trends select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
+
+.movie-trends select option {
+  background: rgba(102,102,111,0.1);
+  color: #fff;
+}
+
+/* style input range */
+.range i {
+  color: #ffb400;
+}
+
+.range i, .range span {
+  position: relative;
+  top: -9px;
+}
+
+input[type="range"] {
+  height: 28px;
+  width: 70%;
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  padding: 0 8px;
+  margin: 8px 0;
+  background: none;
+}
+
+/* Chrome and Opera */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #28282f;
+  height: 5px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-top: -10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: #ffb400;
+}
+
+/* Firefox */
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #28282f;
+  height: 5px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:focus::-moz-range-thumb {
+  background: #ffb400;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: #ffb400;
+  border-radius: 4px;
+  height: 4px;
+}
+
+input[type="range"]:hover::-moz-range-progress,
+input[type="range"]:focus::-moz-range-progress {
+  background: #ffb400;
+}
+
+/* Edge and IE */
+input[type="range"]::-ms-track {
+  background: #28282f;
+  height: 5px;
+  border-radius: 4px;
+  border: none;
+  color: transparent;
+}
+
+input[type="range"]::-ms-thumb {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 4px 0;
+}
+
+input[type="range"]:hover::-ms-thumb,
+input[type="range"]:focus::-ms-thumb {
+  background: #ffb400;
+  border: none;
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #ffb400;
+  border-radius: 4px;
+}
+
+input[type="range"]:hover::-ms-fill-lower,
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ffb400;
+}
+
+.movie-trends button:hover, .movie-trends button.active {
+  background: #db1623;
+}
+
+/* cards movies */
+.cards-movie-trends {
+  font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;
+}
+
+.cards-movie-trends p {
+  color: #66666f;
+}
+
+.cards-movie-trends img {
+  border-radius: 10px;
+}
+
+.cards-movie-trends h3 {
+  font-family: 'SFUIDisplayBold', Arial, Helvetica, sans-serif;
+  font-size: 1.125em;
+  margin-top: 20px;
+}
+
+.cards-movie-trends span {
+  color: #ffb400;
+  float: right;
+}
+
+.cards-movie-trends i.fa-heart {
+  margin-left: 20px;
+}
+
+
+
+.cards-movie-trends i.visualized, .cards-movie-trends i.liked {
+  color: #db1623;
+}
+
+.cards-movie-trends span i {
+  color: #ffb400;
+  margin-right: 10px;
+}
+
+
+/* MOVIE TRAILER */
+.movie-trailer {
+  width: 91.5%;
+  border-radius: 25px;
+  padding: 150px 0;
+  background: url('../image/jurassic-world-banner.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: 0px 0px 89px 15px rgba(11, 11, 11, 0.86);
+}
+
+.movie-trailer span {
+  display: block;
+}
+
+.movie-trailer p:nth-child(5) {
+  color: #fff;
+}
+
+.movie-trailer button:nth-child(6) {
+  margin: 0;
+  background: #db1623;
+  box-shadow: -6px 10px 89px 16px rgba(219, 22, 35, 0.55);
+}
+
+.movie-trailer button:nth-child(7) {
+  background: #000;
+  box-shadow: none;
+  margin-left: 40px;
+}
+
+.movie-trailer nav li {
+  padding: 0 10px;
+}
+
+.nav-movie-trailer {
+  float: right;
+}
+
+
+/* JAVASCRIPT */
+.modal-content {
+  color: #151518;
+}
+
+.modal-content p {
+  font-size: 1.5em;
+  font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;
+}
+
+#modalMovieWatch .modal-content {
+  width: 840px;
+  text-align: center;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 1200px) and (max-width: 1788px) {
+  .movie-trends button {
+    margin-top: 30px;
+  }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .movie-categories h2 {
+    font-size: 1.5em;
+  }
+
+  .movie-categories h2::after {
+    left: 110px;
+  }
+  .movies-before h2::after {
+    left: 70px !important;
+  }
+
+  .movie-trends button {
+    margin-top: 30px;
+  }
+
+  .cards-movie-trends i.fa-heart {
+    margin-left: 0px;
+  }
+
+  .movie-trends select {
+    background-position: 135px center;  /*Posição da imagem do background*/
+    width: 117px;
+    height: 45px
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .movie-categories h2 {
+    font-size: 1.125em;
+    margin-top: 7px;
+  }
+
+  .movie-categories h2::after {
+    left: 90px;
+  }
+  .movies-before h2::after {
+    left: 60px !important;
+  }
+
+  .movie-categories button {
+    display: none;
+  }
+
+  .select-categories {
+    display: block;
+  }
+
+  .select-categories select {
+    width: 177px !important;
+    text-align: center;
+  }
+
+  .movie-trends select {
+    background-position: 135px center;  /*Posição da imagem do background*/
+    width: 137px;
+    height: 45px
+  }
+
+  .cards-movie-trends i.fa-heart {
+    margin-left: 0px;
+  }
+
+  .movie-trailer {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie-categories h2, .movie-categories p {
+    text-align: center;
+  }
+
+  .movie-categories h2::after {
+    display: none;
+  }
+
+  .movie-categories::before {
+    top: 200px;
+  }
+
+  .movies-before img {
+    margin-bottom: 8px;
+  }
+
+
+  .movie-categories button {
+    display: none;
+  }
+
+  .select-categories {
+    display: block;
+  }
+
+  .select-categories select {
+    width: 277px !important;
+    height: 57px;
+    text-align: center;
+  }
+}

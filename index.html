@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Netflix Redesign</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="container-fluid" id="banner">
+    <div class="container">
+      <div class="row header">
+        <div class="col-md-2 mt-5">
+          <img src="image/logo.png" class="img-fluid" alt="Netflix">
+        </div>
+        <!--<div class="col-md-8 mt-5">
+          <nav class="menu navbar navbar-expand-lg">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+            </ul>
+          </nav>
+        </div>-->
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#info-text">O Que é</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#list">Tratamentos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#faq">Perguntas Frequentes</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </nav>
+
+
+        <div class="col-md-2 mt-5">
+          <nav class="icons-top navbar navbar-expand-lg">
+            <ul class="navbar-nav mr-auto">
+              <li><i class="fas fa-search fa-1x"></i></li>
+              <li><i class="fas fa-bell fa-1x"></i></li>
+              <li><i class="fas fa-user-circle fa-1x"></i></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="offset-md-1 col-md-11 infos-featured-movie mt-5">
+          <span class="mt-5">Duration: 1h 47m</span>
+          <p class="mt-4"><i class="fas fa-star"></i> <strong>6.5</strong> Action | Adventure | Sci-Fi</p>
+          <h1 class="mt-4">Rampage</h1>
+          <p class="mt-4">When three different animals become infected with a dangerous pathogen a
+            <br>primatologist and a geneticist team up to stop them from destroying Chicago.</p>
+          <button data-toggle="modal" data-target="#modalMovieWatch" class="mt-5"><i class="fas fa-play"></i> Watch</button>
+          <button data-toggle="modal" data-target="#modalMovieAdd"><i class="fas fa-plus"></i> Add List</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container-fluid movie-trends movie-categories mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-left">
+        <h2><img src="image/icon-trends.png" alt=""> Trends Now</h2>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><i class="fas fa-fire"></i> Popular</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><i class="fas fa-star"></i> Premieres</p>
+        </div>
+        <div class="col-md-3 text-right">
+          <p><i class="fas fa-plus"></i> Recently Added</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-5">
+      <div class="col-md-12 text-center">
+        <button class="active">Action</button>
+        <button>Adventure</button>
+        <button>Animation</button>
+        <button class="active">Biography</button>
+        <button>Crime</button>
+        <button>Comedy</button>
+        <button>Documentary</button>
+        <button class="active">Drama</button>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-3">
+      <div class="offset-md-1 col-md-2 cards-movie-trends">
+        <img src="image/pacific-rim-2.jpg" class="img-fluid" alt="Star Wars: Han Solo">
+        <h3>Pacific Rim 2: Uprising</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.8</span></p>
+      </div>
+
+      <div class="col-md-2 cards-movie-trends">
+        <img src="image/star-wars-solo.jpg" class="img-fluid" alt="Star Wars: Han Solo">
+        <h3>Star Wars: Han Solo</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 7.2</span></p>
+      </div>
+      
+      <div class="col-md-2 cards-movie-trends">
+        <img src="image/red-sparrow.jpg" class="img-fluid" alt="Star Wars: Han Solo">
+        <h3>Red Sparrow</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.6</span></p>
+      </div>
+      
+      <div class="col-md-2 cards-movie-trends">
+        <img src="image/tomb-raider.jpg" class="img-fluid" alt="Star Wars: Han Solo">
+        <h3>Tomb Raider</h3>
+        <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.7</span></p>
+      </div>
+
+      <div class="col-md-2 mb-5 cards-movie-trends">
+          <img src="image/bad-samaritan.jpg" class="img-fluid" alt="Star Wars: Han Solo">
+          <h3>Bad Samaritan</h3>
+          <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.3</span></p>
+        </div>
+    </div>
+  </section>
+
+
+  <section class="container-fluid movie-trends movie-categories mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 movies-before text-left">
+          <h2><img src="image/icon-movies.png" alt=""> Movies</h2>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><i class="fas fa-play"></i> Series</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><i class="fas fa-check"></i> Original Series</p>
+        </div>
+        <div class="col-md-3 text-right">
+          <p><i class="fas fa-search"></i> Search</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-5">
+      <div class="col-md-12 text-center">
+        <button class="active">Action</button>
+        <button>Adventure</button>
+        <button>Animation</button>
+        <button class="active">Biography</button>
+        <button>Crime</button>
+        <button>Comedy</button>
+        <button>Documentary</button>
+        <button class="active">Drama</button>
+      </div>
+      <div class="col-md-12 select-categories text-center">
+        <select name="categories" id="categories">
+          <option value="Year">Action</option>
+          <option value="2018">Adventure</option>
+          <option value="2017">Animation</option>
+          <option value="2016">Biography</option>
+          <option value="2015">Crime</option>
+          <option value="2014">Comedy</option>
+          <option value="2013">Documentary</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-8">
+              <span>Sort By:</span>
+              <button class="active">Latest</button>
+              <select name="year" id="year">
+                <option value="Year">Year</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+              </select>
+              <select name="filter" id="filter">
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+              </select>
+            </div>
+            <div class="col-md-4 range text-right">
+              <i class="fas fa-star"></i>
+              <input type="range" list="tickmarks">
+              <datalist id="tickmarks">
+                <option value="0" label="0">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="5">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="10">
+              </datalist>
+              <span>5.0</span>
+            </div>
+          </div>
+      
+          <div class="row mt-5 pt-3">
+            <div class="col-md-3 cards-movie-trends">
+              <img src="image/deadpool-2.jpg" class="img-fluid" alt="Deadpool 2">
+              <h3>Deadpool 2</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 8.1</span></p>
+            </div>
+            
+            <div class="col-md-3 cards-movie-trends">
+              <img src="image/the-meg.jpg" class="img-fluid" alt="The Meg">
+              <h3>The Meg</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.4</span></p>
+            </div>
+            
+            <div class="col-md-3 cards-movie-trends">
+              <img src="image/october.jpg" class="img-fluid" alt="October">
+              <h3>October</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 8.0</span></p>
+            </div>
+            
+            <div class="col-md-3 cards-movie-trends">
+              <img src="image/incredibles-2.jpg" class="img-fluid" alt="Incredibles 2">
+              <h3>Incredibles 2</h3>
+              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i>
+                  7.7</span></p>
+            </div>
+            
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/the-1517-paris.jpg" class="img-fluid" alt="The 15:17 to Paris">
+              <h3>The 15:17 to Paris</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.0</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/rampage.jpg" class="img-fluid" alt="Rampage">
+              <h3>Rampage</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.5</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/maze-runner.jpg" class="img-fluid" alt="Maze Runner: Death Cure">
+              <h3>Maze Runner: Death Cure</h3>
+              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.3</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/the-purge.jpg" class="img-fluid" alt="The First Purge">
+              <h3>The First Purge</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.1</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/christopher-robin.jpg" class="img-fluid" alt="Christopher Robin">
+              <h3>Christopher Robin</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 7.3</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/venom.jpg" class="img-fluid" alt="Venom">
+              <h3>Venom</h3>
+              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 7.2</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/peter-rabbit.jpg" class="img-fluid" alt="Peter Rabbit">
+              <h3>Peter Rabbit</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.6</span></p>
+            </div>
+
+            <div class="col-md-3 cards-movie-trends mt-5">
+              <img src="image/jurassic-world.jpg" class="img-fluid" alt="Jurassic World: Fallen">
+              <h3>Jurassic World: Fallen</h3>
+              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 8.3</span></p>
+            </div>
+          </div>
+    </div>
+  </section>
+
+
+  <section class="container-fluid infos-featured-movie movie-trailer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <img src="image/rating.png" class="mt-5" alt="Parental Rating +13">
+          <span class="mt-4">Duration: 2h 08m</span>
+          <p class="mt-4"><i class="fas fa-star"></i> <strong>8.3</strong> Action | Adventure | Sci-Fi</p>
+          <h1 class="mt-4">Jurassic World: Fallen Kingdom</h1>
+          <p class="mt-4">When the island's dormant volcano begins roaring to life, Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.</p>
+          <button class="mt-5"><i class="fas fa-play"></i> Watch</button>
+          <button data-toggle="modal" data-target="#modalMovieAdd"><i class="fas fa-plus"></i> Add List</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row mt-5 pt-3">
+      <div class="col-md-3 cards-movie-trends">
+        <img src="image/mute.jpg" class="img-fluid" alt="Mute">
+        <h3>Mute</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.4</span></p>
+      </div>
+      
+      <div class="col-md-3 cards-movie-trends">
+        <img src="image/life-the-party.jpg" class="img-fluid" alt="Life of the Party">
+        <h3>Life of the Party</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 5.5</span></p>
+      </div>
+      
+      <div class="col-md-3 cards-movie-trends">
+        <img src="image/ant-man.jpg" class="img-fluid" alt="Ant-Man and the Wasp">
+        <h3>Ant-Man and the Wasp</h3>
+        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.9</span></p>
+      </div>
+      
+      <div class="col-md-3 cards-movie-trends">
+        <img src="image/sicario.jpg" class="img-fluid" alt="Sicario: Day of the Soldado">
+        <h3>Sicario: Day of the Soldado</h3>
+        <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i>
+            7.0</span></p>
+      </div>
+    </div>
+</section>
+
+
+<!-- Modal Movie Watch -->
+<div class="modal fade" id="modalMovieWatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog-centered modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>  
+      <div class="modal-body">
+        <iframe width="800" height="600" src="https://www.youtube.com/embed/coOKvrsmQiI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Movie Add List -->
+<div class="modal fade" id="modalMovieAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog-centered modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>  
+      <div class="modal-body">
+        <p><i class="fas fa-check"></i> FILME ADICIONADO COM SUCESSO</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
