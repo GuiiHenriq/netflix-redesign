@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Netflix Redesign</title>
 
+  <script>document.documentElement.className += ' js';</script>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,8 +20,9 @@
           <img src="image/logo.png" class="img-fluid" alt="Netflix">
         </div>
         <div class="col-md-8 mt-5">
-          <nav class="menu navbar navbar-expand-lg">
-            <ul class="navbar-nav mr-auto">
+          <nav class="js-menu menu navbar navbar-expand-lg">
+            <button data-menu="button" aria-expanded="false" aria-controls="menu"><i class="fas fa-bars"></i></button>
+            <ul class="navbar-nav mr-auto" id="menu">
               <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
@@ -27,9 +30,9 @@
             </ul>
           </nav>
         </div>
-        <div class="col-md-2 mt-5">
+        <div class="col-md-6 mt-5">
           <nav class="icons-top navbar navbar-expand-lg">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" id="icons-menu">
               <li><i class="fas fa-search fa-1x"></i></li>
               <li><i class="fas fa-bell fa-1x"></i></li>
               <li><i class="fas fa-user-circle fa-1x"></i></li>
@@ -85,34 +88,54 @@
     </div>
 
     <div class="row mt-5 pt-3">
-      <div class="offset-md-1 col-md-2 cards-movie-trends">
+      <div class="offset-md-1 col-md-2 cards-movie-trends first-movie">
         <img src="image/pacific-rim-2.jpg" class="img-fluid" alt="Star Wars: Han Solo">
         <h3>Pacific Rim 2: Uprising</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.8</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 5.8</div>
+        </section>
       </div>
 
       <div class="col-md-2 cards-movie-trends">
         <img src="image/star-wars-solo.jpg" class="img-fluid" alt="Star Wars: Han Solo">
         <h3>Star Wars: Han Solo</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 7.2</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 7.2</div>
+        </section>
       </div>
       
       <div class="col-md-2 cards-movie-trends">
         <img src="image/red-sparrow.jpg" class="img-fluid" alt="Star Wars: Han Solo">
         <h3>Red Sparrow</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.6</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 6.6</div>
+        </section>
       </div>
       
       <div class="col-md-2 cards-movie-trends">
         <img src="image/tomb-raider.jpg" class="img-fluid" alt="Star Wars: Han Solo">
         <h3>Tomb Raider</h3>
-        <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.7</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 6.7</div>
+        </section>
       </div>
 
       <div class="col-md-2 mb-5 cards-movie-trends">
           <img src="image/bad-samaritan.jpg" class="img-fluid" alt="Star Wars: Han Solo">
           <h3>Bad Samaritan</h3>
-          <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.3</span></p>
+          <section class="card-info-box">
+            <div class="card-date">2018</div>
+            <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+            <div class="card-note"><i class="fas fa-star"></i> 6.3</div>
+          </section>
         </div>
     </div>
   </section>
@@ -202,78 +225,125 @@
             </div>
           </div>
       
-          <div class="row mt-5 pt-3">
-            <div class="col-md-3 cards-movie-trends">
+          <div class="row mt-5 pt-3 cards-movie-trends">
+            <div class="col-md-3 first-movie">
               <img src="image/deadpool-2.jpg" class="img-fluid" alt="Deadpool 2">
               <h3>Deadpool 2</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 8.1</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 8.1</div>
+              </section>
             </div>
             
             <div class="col-md-3 cards-movie-trends">
               <img src="image/the-meg.jpg" class="img-fluid" alt="The Meg">
               <h3>The Meg</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.4</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 6.4</div>
+              </section>
             </div>
             
             <div class="col-md-3 cards-movie-trends">
               <img src="image/october.jpg" class="img-fluid" alt="October">
               <h3>October</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 8.0</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 8.0</div>
+              </section>
             </div>
             
             <div class="col-md-3 cards-movie-trends">
               <img src="image/incredibles-2.jpg" class="img-fluid" alt="Incredibles 2">
               <h3>Incredibles 2</h3>
-              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i>
-                  7.7</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 7.7</div>
+              </section>
             </div>
             
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/the-1517-paris.jpg" class="img-fluid" alt="The 15:17 to Paris">
               <h3>The 15:17 to Paris</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.0</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 5.0</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/rampage.jpg" class="img-fluid" alt="Rampage">
               <h3>Rampage</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.5</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 6.5</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/maze-runner.jpg" class="img-fluid" alt="Maze Runner: Death Cure">
               <h3>Maze Runner: Death Cure</h3>
-              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.3</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 6.3</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/the-purge.jpg" class="img-fluid" alt="The First Purge">
               <h3>The First Purge</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.1</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 6.1</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/christopher-robin.jpg" class="img-fluid" alt="Christopher Robin">
               <h3>Christopher Robin</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 7.3</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 7.3</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/venom.jpg" class="img-fluid" alt="Venom">
               <h3>Venom</h3>
-              <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 7.2</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 7.2</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/peter-rabbit.jpg" class="img-fluid" alt="Peter Rabbit">
               <h3>Peter Rabbit</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 6.6</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 6.6</div>
+              </section>
             </div>
 
             <div class="col-md-3 cards-movie-trends mt-5">
               <img src="image/jurassic-world.jpg" class="img-fluid" alt="Jurassic World: Fallen">
               <h3>Jurassic World: Fallen</h3>
-              <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 8.3</span></p>
+              <section class="card-info-box">
+                <div class="card-date">2018</div>
+                <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+                <div class="card-note"><i class="fas fa-star"></i> 8.3</div>
+              </section>
             </div>
           </div>
     </div>
@@ -284,7 +354,7 @@
     <div class="container">
       <div class="row">
         <div class="offset-md-1 col-md-11">
-          <img src="image/rating.png" class="mt-5" alt="Parental Rating +13">
+          <img src="image/rating.png" alt="Parental Rating +13">
           <span class="mt-4">Duration: 2h 08m</span>
           <p class="mt-4"><i class="fas fa-star"></i> <strong>8.3</strong> Action | Adventure | Sci-Fi</p>
           <h1 class="mt-4">Jurassic World: Fallen Kingdom</h1>
@@ -297,29 +367,44 @@
 
   <section class="container">
     <div class="row mt-5 pt-3">
-      <div class="col-md-3 cards-movie-trends">
+      <div class="col-md-3 cards-movie-trends first-movie">
         <img src="image/mute.jpg" class="img-fluid" alt="Mute">
         <h3>Mute</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye"></i> <span><i class="fas fa-star"></i> 5.4</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 5.4</div>
+        </section>
       </div>
       
       <div class="col-md-3 cards-movie-trends">
         <img src="image/life-the-party.jpg" class="img-fluid" alt="Life of the Party">
         <h3>Life of the Party</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 5.5</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 5.5</div>
+        </section>
       </div>
       
       <div class="col-md-3 cards-movie-trends">
         <img src="image/ant-man.jpg" class="img-fluid" alt="Ant-Man and the Wasp">
         <h3>Ant-Man and the Wasp</h3>
-        <p>2018 <i class="fas fa-heart"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i> 6.9</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart liked"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 6.9</div>
+        </section>
       </div>
       
       <div class="col-md-3 cards-movie-trends">
         <img src="image/sicario.jpg" class="img-fluid" alt="Sicario: Day of the Soldado">
         <h3>Sicario: Day of the Soldado</h3>
-        <p>2018 <i class="fas fa-heart liked"></i> <i class="fas fa-eye visualized"></i> <span><i class="fas fa-star"></i>
-            7.0</span></p>
+        <section class="card-info-box">
+          <div class="card-date">2018</div>
+          <div class="card-interaction"><i class="fas fa-heart"></i><i class="fas fa-eye visualized"></i></div>
+          <div class="card-note"><i class="fas fa-star"></i> 7.0</div>
+        </section>
       </div>
     </div>
 </section>

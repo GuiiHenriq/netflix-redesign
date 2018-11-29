@@ -1,8 +1,19 @@
-const textAdd = document.querySelector('.text-add');
-const btnAdd = document.querySelector('.infos-movie-top button:nth-child(6)');
+function initMobile() {
+  const menuButton = document.querySelector('[data-menu="button"]');
+  const menu = document.querySelector('#menu');
+  const iconsMenu = document.querySelector('#icons-menu');
+  const eventos = ['click', 'touchstart'];
 
-function showTextAddList() {
-  textAdd.classList.add('ativo');
+  if(menuButton) {
+    function openMenu() {
+      menuButton.classList.toggle('active');
+      menu.classList.toggle('active');
+      iconsMenu.classList.toggle('active');
+    }
+
+    eventos.forEach((userEvent) => {
+      menuButton.addEventListener(userEvent, openMenu);
+    });
+  }
 }
-
-btnAdd.addEventListener('click', showTextAddList);
+initMobile();
