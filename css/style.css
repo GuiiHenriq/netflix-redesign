@@ -18,7 +18,6 @@ button:focus, select:focus { outline: 0; }
   font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;
   background: url('../image/bg-banner.jpg');
   padding-bottom: 10%;
-
   background-size: cover;
 }
 
@@ -54,6 +53,36 @@ button:focus, select:focus { outline: 0; }
 
 .icons-top i {
   padding: 0 20px;
+}
+
+.notification::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #db1623;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 89px;
+}
+
+.notification:hover {
+  cursor: pointer;
+}
+
+.notification:hover::after {
+  content: "Assista um Filme";
+  padding-top: 10px;
+  padding-left: 35px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #000;
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  border-radius: 5px;
 }
 
 .header::after {
@@ -166,7 +195,7 @@ button:focus, select:focus { outline: 0; }
 }
 
 .movies-before h2::after {
-  left: 80px !important;
+  left: 89.5px !important;
 }
 
 .select-categories {
@@ -413,239 +442,140 @@ input[type="range"]:focus::-ms-fill-lower {
 }
 
 
-/* JAVASCRIPT */
-.modal-content {
-  color: #151518;
+.footer a {
+  font-family: 'SFProDisplayBold', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background: #1d1d21;
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  color: #fff;
+  padding-top: 10px;
 }
 
-.modal-content p {
+
+/* JAVASCRIPT */
+/* Modal Movie Trailer */
+.movie-list-container {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.movie-list-container.active {
+  display: flex;
+}
+
+.movie-list {
+  min-width: 300px;
+  height: 80px;
+  position: relative;
+  padding: 20px;
+  border: 3px solid #16a085;
+}
+
+.movie-list p {
   font-size: 1.5em;
   font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;
+  color: #fff;
 }
 
-#modalMovieWatch .modal-content {
-  width: 840px;
-  text-align: center;
-}
-
-
-/* RESPONSIVE */
-@media screen and (min-width: 1200px) and (max-width: 1788px) {
-  .movie-trends button {
-    margin-top: 30px;
-  }
-}
-
-/* 992px - 1199px DESKTOP */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .movie-categories h2 {
-    font-size: 1.5em;
-  }
-
-  .movie-categories h2::after {
-    left: 110px;
-  }
-  .movies-before h2::after {
-    left: 70px !important;
-  }
-
-  .movie-trends button {
-    margin-top: 30px;
-  }
-
-  .cards-movie-trends i.fa-heart {
-    margin-left: 0px;
-  }
-
-  .movie-trends select {
-    background-position: 85px center;  /*Posição da imagem do background*/
-    width: 117px;
-    height: 45px
-  }
-}
-
-/* 768px - 991px TABLET */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .movie-categories h2 {
-    font-size: 1.125em;
-    margin-top: 7px;
-  }
-
-  .movie-categories h2::after {
-    left: 90px;
-  }
-  
-  .movies-before h2::after {
-    left: 60px !important;
-  }
-
-  .movie-categories button {
-    display: none;
-  }
-
-  .cards-movie-trends i.fa-heart {
-    margin-left: 0 !important;
-  }
-
-  .cards-movie-trends p, .cards-movie-trends i.fa-heart, .cards-movie-trends span {
-    display: block !important;
-    text-align: center;
-  }
-
-  .cards-movie-trends i.fa-heart {
-    margin-top: 5px;
-  }
-
-  .cards-movie-trends span {
-    float: none;
-  }
-
-  .select-categories {
-    display: block;
-  }
-
-  .select-categories select {
-    width: 177px !important;
-    text-align: center;
-  }
-
-  .movie-trends select {
-    background-position: 105px center;  /*Posição da imagem do background*/
-    width: 137px;
-    height: 45px
-  }
-
-  .cards-movie-trends i.fa-heart {
-    margin-left: 0px;
-  }
-
-  .movie-trailer {
-    padding: 100px 0;
-  }
-}
-
-/* 762px MOBILE */
-@media screen and (max-width: 767px) {
-  .infos-featured-movie button {
-   margin: 20px 0 0 0 !important;
-  }
-  
-  .movie-categories h2, .movie-categories p {
-    text-align: center;
-  }
-
-  .movie-categories h2::after {
-    display: none;
-  }
-
-  .movie-categories::before {
-    top: 200px;
-  }
-
-  .movies-before img {
-    margin-bottom: 8px;
-  }
-
-  .movie-categories button {
-    display: none;
-  }
-
-  .cards-movie-trends {
-    margin-top: 50px;
-    text-align: center;
-  }
-
-  .cards-movie-trends span {
-    float: none;
-  }
-
-  .cards-movie-trends img {
-    margin-top: 50px !important;
-  }
-
-  .select-categories {
-    display: block;
-  }
-
-  .select-categories select {
-    width: 277px !important;
-    height: 57px;
-    text-align: center;
-  }
-
-  .movie-categories select {
-    display: block;
-    margin: 20px auto 0 auto;
-    text-align: center;
-  }
-  
-  .movie-categories select:first-child {
-    margin-top: 0;
-    background-position: 235px center;
-  }
-  
-  .movie-categories span {
-    text-align: center !important;    
-  }
-
-  .range {
-    text-align: center !important;
-    margin-top: 20px;
-  }
-
-  .movie-trailer {
-    padding: 150px 0;
-    margin-top: 100px !important;
-  }
-
-  .first-movie {
-    margin-top: -60px !important;
-  }
+.btn-close {
+  background: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  z-index: 700;
 }
 
 
-/* RESPONSIVE OTHER CONFIGS */
-@media screen and (max-width: 991px) {
-  .js [data-menu="button"] {
-    display: flex;
-    background: #222;
-    border: none;
-    border-radius: 4px;
-    padding: .5em 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-    margin: 10px;
-    align-items: center;
-    position: relative;
-    z-index: 30;
-  }
+/* Modal Dev Web */
+.dev-container {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
 
-  .js #menu {
-    display: none;
-    position: absolute;
-    background: #fb5;
-    width: 100vw;
-    height: 100vh;
-    top: -48px;
-    padding: 120px 0 20px 0;
-    z-index: 20;
-  }
+.dev-container.active {
+  display: flex;
+}
 
-  .js #menu.active {
-    display: block;
-  }
+.dev-list {
+  min-width: 300px;
+  position: relative;
+  padding: 20px;
+  border: 3px solid #16a085;
+}
 
-  .js #icons-menu {
-    display: none;
-  }
+.dev-list p {
+  font-size: 1.5em;
+  font-family: 'SFProDisplaySemiBold', Arial, Helvetica, sans-serif;
+  color: #fff;
+}
 
-  .js #icons-menu.active {
-    display: inline;
-    z-index: 50;
-  }
 
-  #banner nav a.active::after {
-    display: none;
-  }
+/* Navigation Tab */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 45px;
+  border-radius: 75px;
+  background: rgba(102,102,111,0.1);
+  color: #fff;
+  text-decoration: none;
+}
+
+.tab-list li {
+  margin-left: 20px;
+}
+
+.tab-list li:first-child {
+  margin: 0;
+}
+
+.active a {
+  background: #db1623;
+}
+
+.tab-list a:hover {
+  background: #db1623;
+}
+
+.tab-list li {
+  display: inline;
 }
