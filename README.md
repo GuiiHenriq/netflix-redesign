@@ -1,5 +1,5 @@
 # Netflix Redesign
-Projeto desenvolvido sobre o PSD da <a href="https://www.asylab.com/single-post/2018/06/04/Redesign-Concept-Netflix-Website" target="_blank">Asylab</a><br><br>
+Projeto de codificação do site Netflix baseado no PSD desenvolvido pela <a href="https://www.asylab.com/single-post/2018/06/04/Redesign-Concept-Netflix-Website" target="_blank">Asylab</a><br><br>
 # Linguagens
 HTML 5<br>
 CSS 3<br>
