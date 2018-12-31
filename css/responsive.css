@@ -95,6 +95,15 @@
 
 /* 762px MOBILE */
 @media screen and (max-width: 767px) {
+  .menu-mobile {
+    padding-top: 12px !important;
+    display: block;
+  }
+
+  .header img {
+    width: 160px;
+  }
+
   .infos-featured-movie button {
    margin: 20px 0 0 0 !important;
   }
@@ -157,6 +166,19 @@
     text-align: center !important;    
   }
 
+  .tab-list, .tab-list li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tab-list li a {
+    margin-top: 10px;
+  }
+
+  .tab-list li a[href="#tab-1"] {
+    margin: 0;
+  }
+
   .range {
     text-align: center !important;
     margin-top: 20px;
@@ -175,43 +197,33 @@
 
 /* RESPONSIVE OTHER CONFIGS */
 @media screen and (max-width: 991px) {
-  .js [data-menu="button"] {
-    display: flex;
-    background: #222;
-    border: none;
-    border-radius: 4px;
-    padding: .5em 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-    margin: 10px;
-    align-items: center;
-    position: relative;
-    z-index: 30;
-  }
-
-  .js #menu {
+  .menu-desktop {
     display: none;
-    position: absolute;
-    background: #fb5;
-    width: 100vw;
-    height: 100vh;
-    top: -48px;
-    padding: 120px 0 20px 0;
-    z-index: 20;
   }
 
-  .js #menu.active {
+  .iconstopteste {
+    display: none;
+  }
+
+  .menu-mobile {
+    margin: 5% 0 0 0 !important;
     display: block;
   }
 
-  .js #icons-menu {
+  .menu-mobile ul {
     display: none;
   }
 
-  .js #icons-menu.active {
-    display: inline;
-    z-index: 50;
+  .menu-mobile ul.ativo {
+    display: block;
+  }
+
+  [data-menu="button"] {
+    display: block;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
   }
 
   #banner nav a.active::after {

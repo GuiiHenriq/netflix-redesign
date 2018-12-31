@@ -12,7 +12,6 @@
   <link rel="icon" type="image/png" href="favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -22,12 +21,11 @@
   <section class="container-fluid" id="banner">
     <div class="container">
       <div class="row header">
-        <div class="col-md-2 mt-5">
+        <div class="col-md-2 col-6 mt-5">
           <img src="image/logo.png" class="img-fluid" alt="Netflix">
         </div>
-        <div class="col-md-8 mt-5">
+        <div class="col-md-8 mt-5 menu-desktop">
           <nav class="js-menu menu navbar navbar-expand-lg">
-            <!--<button data-menu="button" aria-expanded="false" aria-controls="menu"><i class="fas fa-bars"></i></button>-->
             <ul class="navbar-nav mr-auto" id="menu">
               <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
@@ -36,7 +34,18 @@
             </ul>
           </nav>
         </div>
-        <div class="col-md-2 mt-5">
+        <div class="col-md-10 col-6 mt-5 menu-mobile">
+          <nav class="js-menu menu navbar navbar-expand-lg">
+            <button data-menu="button" aria-expanded="false" aria-controls="menu"><i class="fas fa-bars fa-2x"></i></button>
+            <ul class="navbar-nav mr-auto" id="menu-mobile">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-2 mt-5 iconstopteste">
           <nav class="icons-top navbar navbar-expand-lg">
             <ul class="navbar-nav mr-auto" id="icons-menu">
               <li><i class="fas fa-search fa-1x"></i></li>
@@ -179,17 +188,6 @@
             <li><a class="tab-control" href="#tab-8">Drama</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="col-md-12 select-categories text-center">
-        <select name="categories" id="categories">
-          <option value="Action">Action</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Animation">Animation</option>
-          <option value="Biography">Biography</option>
-          <option value="Crime">Crime</option>
-          <option value="Comedy">Comedy</option>
-          <option value="Sci-Fi">Sci-Fi</option>
-        </select>
       </div>
     </div>
 
@@ -657,12 +655,11 @@
     <div class="dev-list">
       <button data-modal="close-dev" class="btn-close">X</button>
       <p><i class="fas fa-user-tie"></i> Guilherme Henrique</p>
-      <p><i class="fas fa-envelope"></i> guilhermeerba@hotmail.com</p>
+      <p><i class="fas fa-envelope"></i> erba.guilherme@gmail.com</p>
     </div>
   </section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/slick.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="module" src="js/main.js"></script>
 </body>

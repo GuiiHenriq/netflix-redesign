@@ -35,6 +35,14 @@ button:focus, select:focus { outline: 0; }
   color: #fff;
 }
 
+.tab-list li a {
+  margin-top: 10px;
+}
+
+.menu-mobile, [data-menu="button"] {
+  display: none;
+}
+
 #banner nav a.active::after {
   content: "";
   display: block;
