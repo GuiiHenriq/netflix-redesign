@@ -9,9 +9,5 @@ Javascript
 Bootstrap<br>
 jQuery
 <br><br>
-# Automação
-Webpack<br>
-Babel
-<br><br>
 # Acesse
 <a href="https://guiihenriq.github.io/netflix-redesign/" target="_blank">https://guiihenriq.github.io/netflix-redesign/</a>
